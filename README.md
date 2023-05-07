@@ -1,6 +1,8 @@
 # SumzGPT
 Article (By link) summarizer using OpenAI
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
+### Using:
+Vite
+Tailwindcss
+RapidApi(For openAI)
+##### https://www.youtube.com/watch?v=vpvtZZi5ZWk
+##### @ HeroSection
