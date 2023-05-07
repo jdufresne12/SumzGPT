@@ -4,8 +4,7 @@ Article (By link) summarizer using OpenAI
 - Vite
 - Tailwindcss
 - RapidApi(For openAI)
-##### https://www.youtube.com/watch?v=vpvtZZi5ZWk @HeroSection-19:30
+##### https://www.youtube.com/watch?v=vpvtZZi5ZWk @51:50
 ##### Where we left off
-- Make Logo-svg popup
-- Make favicon work
-- could be an importing error(ask chat)
+- Test our URL summary
+
