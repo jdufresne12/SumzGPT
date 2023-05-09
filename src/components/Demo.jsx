@@ -55,33 +55,35 @@ const Demo = () => {
             className="url_input peer"
           />
           <button type='submit' className="submit_btn peer-focus: border-gray-700 peer-focus: text-gray-700">
-            →
+            <p>→</p>
           </button>
         </form>
+
         {/* Browse URL History */}
-        <div className="flex flex-col gap-1 max-h-60 overflow-y-auto ">
-          {allArticles.map((item, index) => (
-            <div 
-            key={`link-${index}`}
-            onClick={() => setArticle(item)}
-            className="link_card"
+        <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
+          {allArticles.reverse().map((item, index) => (
+            <div
+              key={`link-${index}`}
+              onClick={() => setArticle(item)}
+              className='link_card'
             >
-              <div className="copy_btn" onClick={() => handleCopy(item.url)}>
-                <img 
+              <div className='copy_btn' onClick={() => handleCopy(item.url)}>
+                <img
                   src={copied === item.url ? tick : copy}
-                  alt="copy icon"
-                  className="w-[40%] h-[40%] object-contain"
+                  alt={copied === item.url ? "tick_icon" : "copy_icon"}
+                  className='w-[40%] h-[40%] object-contain'
                 />
               </div>
-              <p className="flex-1 font-satoshi text-blue-700 font-medium text-sm truncate">
+              <p className='flex-1 font-satoshi text-blue-700 font-medium text-sm truncate'>
                 {item.url}
               </p>
             </div>
           ))}
         </div>
       </div>
+
       {/* Display Results */}
-      <div className="my-10 max-w-full flex jusitfy-center items-center">
+      <div className="my-10 max-w-full flex justify-center items-center">
         {isFetching ? (
           <img src={loader} alt="loader_img" className="w-20 h-20 object-contain"/>
         ) : error ?(
